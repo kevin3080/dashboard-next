@@ -8,7 +8,7 @@ interface Props {
 }
 
 
-export async function generateMetadata({params}:Props, parent: Metadata): Promise<Metadata> {
+export async function generateMetadata({params}:Props): Promise<Metadata> {
 
   try {
     const {id, name} = await getPokemon(params.id)
@@ -22,9 +22,6 @@ export async function generateMetadata({params}:Props, parent: Metadata): Promis
       description: `Pokemon no encontrado`
     }
   }
-
- 
-  
 }
 
 
